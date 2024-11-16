@@ -5,11 +5,17 @@
 // }
 
 // export default App;
-
+import List1 from "./components/List1";
 import ListGroup from "./components/ListGroup";
 
-function App(){
-  return <div> <ListGroup></ListGroup> </div>;
+function App() {
+  return (
+    <div>
+      {" "}
+      {/* <List1></List1> */}
+      <ListGroup></ListGroup>{" "}
+    </div>
+  );
 }
 
 export default App;
