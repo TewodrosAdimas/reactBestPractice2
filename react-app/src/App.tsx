@@ -1,10 +1,11 @@
-import Like from "./components/Like";
-function App() {
+import React from "react";
+import LikeButton from "./components/LikeButton";
+const App: React.FC = () => {
   return (
     <div>
-      <Like></Like>
+      <LikeButton />
     </div>
   );
-}
+};
 
 export default App;

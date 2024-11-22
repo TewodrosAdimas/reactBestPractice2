@@ -1,10 +1,14 @@
 import React from "react";
 import { AiOutlineLike } from "react-icons/ai";
 
-const Like = () => {
+interface LikeProps {
+  LikeHandler: () => void;
+}
+
+const Like = ({ LikeHandler }: LikeProps) => {
   return (
     <div>
-      <AiOutlineLike size={50} />
+      <AiOutlineLike size={50} onClick={LikeHandler} />
     </div>
   );
 };
