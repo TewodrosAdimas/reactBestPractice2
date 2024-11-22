@@ -1,16 +1,23 @@
-import Button from "./components/button";
+import AlertButton from "./components/AlertButton";
+import Alert from "./components/Alert";
+import { useState } from "react";
 function App() {
+  const [alertVisible, SetAlertVisible] = useState(false);
   const name = "Tedi";
   const onClickHandler = () => {
-    console.log("clicked");
+    SetAlertVisible(true);
+  };
+  const alertHandler = () => {
+    SetAlertVisible(false);
   };
   return (
     <div>
-      <Button
+      {alertVisible && <Alert AlertHandler={alertHandler} />}
+      <AlertButton
         name={name}
         color="secondary"
         onClickHandler={onClickHandler}
-      ></Button>
+      ></AlertButton>
     </div>
   );
 }
