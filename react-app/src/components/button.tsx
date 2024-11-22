@@ -2,11 +2,13 @@ import { MouseEvent, useState } from "react";
 
 interface ButtonProps {
   name: string;
+  onClickHandler: () => void;
+  color: string;
 }
 
-function Button({ name }: ButtonProps) {
+function Button({ name, onClickHandler, color }: ButtonProps) {
   return (
-    <button type="button" className="btn btn-primary">
+    <button className={`btn btn-${color}`} onClick={onClickHandler}>
       {name}
     </button>
   );
