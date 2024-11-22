@@ -6,12 +6,7 @@ interface ListGroupProps {
 }
 
 function ListGroup({ items, heading }: ListGroupProps) {
-  // let items = ["New York", "Addis Ababa", "London", "Rome"];
-  //   items = [];
-
   const message = items.length === 0 && <p>No Item</p>;
-  // event handler handled  with separate function
-  // const handleClick = (event: MouseEvent) => console.log(event);
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
@@ -26,8 +21,6 @@ function ListGroup({ items, heading }: ListGroupProps) {
                 ? "list-group-item active"
                 : "list-group-item"
             }
-            // event handler handled  with separate function
-            // onClick={handleClick}
             onClick={() => {
               setSelectedIndex(index);
             }}
