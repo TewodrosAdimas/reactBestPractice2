@@ -6,6 +6,7 @@ const LikeButton: React.FC = () => {
 
   const toggleLike = () => {
     setLiked((prevState) => !prevState);
+    console.log("clicked");
   };
 
   return (
