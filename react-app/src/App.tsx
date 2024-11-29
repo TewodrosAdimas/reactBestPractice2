@@ -1,13 +1,19 @@
-import React from "react";
-import LikeButton from "./components/LikeButton";
-import Form from "./components/Form";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+interface User{
+  id:number;
+  name: string;
+}
 
 const App: React.FC = () => {
-  return (
-    <div>
-      <Form></Form>
-    </div>
-  );
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    axios
+      .get<User[]>("https://jsonplaceholder.typicode.com/users")
+      .then((res) => console.log(res.data[0].name));
+  });
+  return <div></div>;
 };
 
 export default App;
